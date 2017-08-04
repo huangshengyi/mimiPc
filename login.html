@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小米米-账号登录</title>
+    <link rel="Shortcut Icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+<div class="logo_header">
+    <div class="header_login"><a href="./index.html" title="小米米商城首页"></a></div>
+</div>
+<div class="content">
+    <div class="banner">
+        <div class="login_form">
+            <div class="form_header">
+                <ul>
+                    <li><a href="javascript:;" class="current">账号登录</a></li>
+                    <li class="saoma"><a href="javascript:;">扫码登录</a></li>
+                </ul>
+            </div>
+            <div class="form_main">
+                <form action="login.php" method="get">
+                    <ul>
+                        <li>
+                            <input type="text" name="usename" id="user">
+                            <span id="user_span">邮箱/手机号码/小米米账号</span>
+                        </li>
+                        <p id="user_p"></p>
+                        <li>
+                            <input type="password" name="password" id="pass">
+                            <span id="pass_span">密码</span>
+                        </li>
+                        <p id="pass_p"></p>
+                        <li>
+                            <button>立即登录</button>
+                        </li>
+                    </ul>
+                </form>
+                <p class="links_area">
+                    <a href="./register.html">注册小米账号</a><span>|</span><a href="javascript:;">忘记密码了?</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer_info">
+    <p>
+        <a href="javascript:;">简体</a> <span>|</span>
+        <a href="javascript:;">繁体</a> <span>|</span>
+        <a href="javascript:;">English</a> <span>|</span>
+        <a href="javascript:;">常见问题</a>
+    </p>
+    <p>本人纯属练习,要是有侵犯版权之处,请联系我删掉: QQ2458767808</p>
+</div>
+
+<script src="node_modules/scriptjs/dist/script.min.js"></script>
+<script>
+    //异步加载包
+    $script('node_modules/jquery/dist/jquery.min.js', function(){
+        $script('js/login.js');
+    });
+</script>
+</body>
+</html>

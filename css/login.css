@@ -1,0 +1,133 @@
+@import "base.css";
+.logo_header {
+  width: 100%;
+  height: 98px;
+}
+.logo_header .header_login {
+  width: 1130px;
+  height: 98px;
+  margin: 0 auto;
+  background: url("../images/mistore_logo.png") no-repeat left;
+}
+.logo_header .header_login a {
+  display: block;
+  width: 200px;
+  height: 100%;
+}
+.content {
+  width: 100%;
+  height: 588px;
+  background: #14212b;
+}
+.content .banner {
+  width: 1130px;
+  height: 588px;
+  margin: 0 auto;
+  background: url("../images/banner.jpg") no-repeat center top;
+  position: relative;
+}
+.content .banner .login_form {
+  width: 400px;
+  height: 523px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -261.5px;
+  background: #ffffff;
+}
+.content .banner .login_form .form_header {
+  width: 100%;
+  height: 94px;
+}
+.content .banner .login_form .form_header ul li {
+  float: left;
+  width: 199px;
+  height: 30px;
+  margin-top: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-right: 1px solid #E0E0E0;
+}
+.content .banner .login_form .form_header ul li.saoma {
+  border-right: none;
+  border-left: 1px solid #E0E0E0;
+}
+.content .banner .login_form .form_header ul li a {
+  font-size: 30px;
+  color: #666666;
+}
+.content .banner .login_form .form_header ul li a:hover {
+  color: #ff6700;
+}
+.content .banner .login_form .form_header ul li a.current {
+  color: #ff6700;
+}
+.content .banner .login_form .form_main ul {
+  width: 336px;
+  margin: 0 auto;
+}
+.content .banner .login_form .form_main ul li {
+  width: 336px;
+  height: 48px;
+  margin-bottom: 14px;
+  position: relative;
+}
+.content .banner .login_form .form_main ul li input {
+  width: 321px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 16px;
+  padding-left: 15px;
+  border: 1px solid #E0E0E0;
+}
+.content .banner .login_form .form_main ul li span {
+  font-size: 16px;
+  color: #a4a4a4;
+  position: absolute;
+  left: 15px;
+  top: 14px;
+}
+.content .banner .login_form .form_main ul li button {
+  width: 336px;
+  height: 48px;
+  margin-top: 10px;
+  font-size: 18px;
+  color: #FFFFFF;
+  cursor: pointer;
+  background: #ff6700;
+}
+.content .banner .login_form .form_main p.links_area {
+  padding-top: 12px;
+  text-align: center;
+}
+.content .banner .login_form .form_main p.links_area a {
+  color: #a4a4a4;
+}
+.content .banner .login_form .form_main p.links_area a:hover {
+  color: #ff6700;
+}
+.content .banner .login_form .form_main p.links_area span {
+  padding: 0 10px;
+  color: #a4a4a4;
+}
+.footer_info {
+  width: 100%;
+  height: 160px;
+  text-align: center;
+  padding-top: 70px;
+}
+.footer_info p {
+  color: #a4a4a4;
+  font-size: 14px;
+  line-height: 28px;
+}
+.footer_info p a {
+  color: #a4a4a4;
+}
+.footer_info p a:hover {
+  color: #ff6700;
+}
+.footer_info p span {
+  color: #a4a4a4;
+  padding: 0 8px;
+}

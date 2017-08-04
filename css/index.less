@@ -1,0 +1,945 @@
+//定义变量
+.border-radius(@r:50%){
+  -webkit-border-radius:@r;
+  -moz-border-radius:@r;
+  -ms-border-radius:@r;
+  border-radius:@r;
+}
+@mi_color:#ff6700; //页面常用颜色
+
+//引入基本样式
+@import "base.css";
+@import "style.css";
+
+//导航栏上方的广告位
+.site-bn-bar {
+  height:120px;
+  background: url(../images/head_banner.jpg) no-repeat center;
+  a {
+    display: block;
+    width:100%;
+    height:100%;
+  }
+}
+//导航栏部分+登录信息+购物车部分start
+.site-topbar {
+  height:40px;
+  background: #333333;
+  //中间版心
+  .container {
+    height:40px;
+    //左边的导航栏
+    .topbar-nav {
+      height:40px;
+      line-height:40px;
+      ul {
+        //width:100%;
+        li {
+          height:40px;
+          float: left;
+          a {
+            display: inline-block;
+            height:100%;
+            padding:0 6px;
+            text-align: center;
+            line-height:40px;
+            &:hover {
+              background: #68777d;
+            }
+          }
+          span {
+            height:40px;
+            color: #376375;
+          }
+        }
+      }
+    }
+    //购物车栏
+    .topbar-cart {
+      width:120px;
+      height:40px;
+      a {
+        display: block;
+        width:100%;
+        height:100%;
+        text-align: center;
+        line-height:40px;
+        background: #424242;
+        &:hover {
+          color: @mi_color;
+          background: #ffffff;
+        }
+      }
+    }
+    //登录注册信息栏
+    .topbar-info {
+      margin-right:20px;
+      a {
+        display: inline-block;
+        height:100%;
+        padding:0 8px;
+        text-align: center;
+        line-height:40px;
+        &:hover {
+          background: #68777d;
+        }
+      }
+      span {
+        height:40px;
+        color: #376375;
+      }
+    }
+  }
+}
+//导航栏部分+登录信息+购物车部分end
+//头部log+导航+搜索栏start
+.site-header {
+  width:100%;
+  height:100px;
+  position: relative;
+  .container {
+    //广告栏
+    .header-logo {
+      width:234px;
+      height:100px;
+      position: relative;
+      a.mi-logo {
+        width:55px;
+        height:55px;
+        display: inline-block;
+        text-indent: -8000em;
+        background:url(../images/mi-logo.png) no-repeat center @mi_color;
+        position: absolute;
+        top:25px;
+      }
+      a.ban_logo {
+        width:165px;
+        height:100px;
+        display: inline-block;
+        text-indent: -8000em;
+        background:url(../images/yyymix.gif) no-repeat center;
+      }
+    }
+    //导航栏
+    .header-nav {
+      height:100px;
+      &>ul {
+        height:100px;
+        li {
+          float: left;
+          text-align: center;
+          line-height:100px;
+          &>a {
+            display: inline-block;
+            font-size:16px;
+            color: #333;
+            padding: 0 10px;
+            &:hover {
+              color: @mi_color;
+            }
+          }
+        }
+      }
+    }
+    //搜索栏
+    .header-search {
+      width:297px;
+      height:75px;
+      padding-top:25px;
+      position: relative;
+      input {
+        width:225px;
+        height:48px;
+        padding:0 10px;
+        font-size:18px;
+        border:1px solid #c1c1c1;
+      }
+      button {
+        width:50px;
+        height:50px;
+        font-size:20px;
+        color: #616161;
+        text-align: center;
+        line-height:50px;
+        border:1px solid #c1c1c1;
+        border-left:none;
+        background: #FFFFFF;
+        cursor: pointer;
+        &:hover {
+          background: @mi_color;
+          color: #FFFFFF;
+        }
+      }
+      .search-hot-words {
+        position: absolute;
+        top:41px;
+        right:65px;
+        cursor: pointer;
+        a {
+          display: inline-block;
+          padding:0 5px;
+          background: #eee;
+          &:hover {
+            color: #FFFFFF;
+            background: @mi_color;
+          }
+        }
+      }
+    }
+  }
+  //鼠标滑过导航栏显示的隐藏部分start
+  .item-children {
+    position: absolute;
+    top:100px;
+    z-index: 60;
+    width:100%;
+    background: #ffffff;
+    height:0;
+    transition:height 0.3s;
+    .container {
+      display: none;
+      width:1226px;
+      height:230px;
+      margin:0 auto;
+      overflow: hidden;
+      ul {
+        display: none;
+        li {
+          float: left;
+          width:204px;
+          height:193px;
+          padding-top:37px;
+          text-align: center;
+          line-height: normal;
+          a.a_img {
+            padding:0;
+            display: block;
+            width:204px;
+            height:110px;
+            margin-bottom:10px;
+            border-right:1px solid #E0E0E0;
+            &.last {
+              border-right:none;
+            }
+            img {
+              height:110px;
+            }
+          }
+          a.title {
+            line-height:30px;
+            margin-bottom:10px;
+            &:hover {
+              color: #000;
+            }
+          }
+          p.price {
+            text-align: center;
+            color: @mi_color;
+          }
+        }
+      }
+    }
+  }
+  //鼠标滑过导航栏显示的隐藏部分end
+}
+//头部log+导航+搜索栏end
+//列表导航栏 + 广告轮播图start
+.home-nav-banner {
+  width:1226px;
+  height:460px;
+  position: relative;
+  //广告轮播图
+  .banner {
+    width:1226px;
+    height:100%;
+    overflow: hidden;
+    position: relative;
+    ul {
+      width:8582px;
+      height:100%;
+      position: absolute;
+      left:0px;
+      &>li {
+        float:left;
+      }
+    }
+    ol {
+      position: absolute;
+      bottom:10px;
+      right:10px;
+      margin-right:15px;
+      &>li {
+        float: left;
+        width:8px;
+        height:8px;
+        margin:0 5px;
+        border:2px solid #616161;
+        cursor: pointer;
+        .border-radius();
+        &.current {
+          background: #9f9f9f;
+        }
+      }
+    }
+    //轮播图左右两侧按钮
+    .direction {
+      width:992px;
+      height:68px;
+      position: absolute;
+      top:50%;
+      right:0;
+      margin-top:-34px;
+      cursor: pointer;
+      span {
+        display: block;
+        width:41px;
+        height:69px;
+      }
+      .direc_l {
+        float: left;
+        background: url(../images/icon-slides.png) no-repeat -84px 0px;
+        &:hover {
+          background: url(../images/icon-slides.png) no-repeat 0px 0px;
+        }
+      }
+      .direc_r {
+        float: right;
+        background: url(../images/icon-slides.png) no-repeat -124px 0px;
+        &:hover {
+          background: url(../images/icon-slides.png) no-repeat -42px 0px;
+        }
+      }
+    }
+  }
+  //列表导航栏
+  .list-nav {
+    position: absolute;
+    top:0;
+    left:0;
+    .nav-l {
+      width:234px;
+      padding:20px 0;
+      background: rgba(24, 27, 28, 0.8);
+      &>li {
+        width:234px;
+        height:42px;
+        &>a {
+          padding:0 28px;
+          display: block;
+          width:178px;
+          height:42px;
+          line-height:42px;
+          color: #FFFFFF;
+          position: relative;
+          &::after {
+            content: '>';
+            font-weight:900;
+            font-size:20px;
+            color: #a1b8c1;
+            position: absolute;
+            right:28px;
+          }
+          &:hover {
+            background: @mi_color;
+          }
+        }
+      }
+    }
+  }
+  //列表导航鼠标滑过显示的产品图
+  .product-r {
+    display: none;
+    padding-left:30px;
+    height:460px;
+    background: #FFFFFF;
+    border-top:1px solid #a1b8c1;
+    position: absolute;
+    left:234px;
+    top:0;
+    box-shadow: 5px 5px 8px 3px #dedede;
+    ul {
+      float: left;
+      width:236px;
+      padding:2px 0 2px 0;
+      margin-right:30px;
+      width:230px;
+      //为最后两个没有选购字样的ul另设置宽度
+      &.noBuy {
+        width:191px;
+      }
+      li {
+        width:100%;
+        height:76px;
+        line-height:76px;
+        &>a {
+          float: left;
+          &:hover span {
+            color: @mi_color;
+          }
+          img {
+            margin-right:15px;
+          }
+          span {
+            font-size:13px;
+            color: #000;
+          }
+        }
+        .xuangou {
+          float: right;
+          width:60px;
+          height:24px;
+          text-align: center;
+          line-height:24px;
+          color: @mi_color;
+          border:1px solid @mi_color;
+          margin-top:26px;
+          &:hover {
+            color: #FFFFFF;
+            background: @mi_color;
+          }
+        }
+      }
+    }
+  }
+}
+//列表导航栏 + 广告轮播图end
+//轮播图下方的热门推荐位和小米明星单品start
+.home-hero-carousel {
+  padding:16px 0 40px 0;
+  overflow: hidden;
+  //热门推荐位
+  .home-hero-sub {
+    height:170px;
+    ul.hero-sub {
+      &>li {
+        float: right;
+        width:316px;
+        height:170px;
+        margin-left:16px;
+        transition:box-shadow 0.3s;
+        &:hover {
+          -webkit-box-shadow: 3px 5px 30px 8px #dbdbdb;
+          -moz-box-shadow: 3px 5px 30px 8px #dbdbdb;
+          -ms-box-shadow: 3px 5px 30px 8px #dbdbdb;
+          box-shadow: 3px 5px 30px 8px #dbdbdb;
+        }
+        &>a {
+          display: block;
+          width:100%;
+          height:100%;
+        }
+      }
+      //第一个li,字体图标区
+      li.fist-li {
+        width:230px;
+        margin-left:0;
+        box-shadow:none;
+        &>ul {
+          &>li {
+            float: left;
+            width:76px;
+            height:85px;
+            text-align: center;
+            background: #5F5750;
+            &>a {
+              display: block;
+              width:71px;
+              height:66px;
+              padding-top:14px;
+              text-align: center;
+              line-height:35px;
+              border-right:1px solid #746a62;
+              border-bottom:1px solid #746a62;
+              &.three {
+                border-right:0;
+              }
+              &.four,&.five {
+                border-bottom:0;
+              }
+              &.six {
+                border-right:0;
+                border-bottom:0;
+              }
+              span {
+                display: block;
+                font-size:23px;
+                &.bewrite {
+                  font-size:13px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  //小米明星单品
+  .home-star-goods {
+    margin-top:17px;
+    //标题栏
+    .title {
+      width:100%;
+      height:58px;
+      height:41px;
+      padding-top:17px;
+      h3 {
+        font-size:24px;
+        font-weight:100;
+      }
+      .button {
+        span {
+          float: right;
+          display: inline-block;
+          width:34px;
+          height:23px;
+          text-align: center;
+          line-height:20px;
+          font-size:23px;
+          font-weight:600;
+          color: #cccccc;
+          cursor: pointer;
+          border:1px solid #cccccc;
+          &.current {
+            color: @mi_color;
+          }
+        }
+      }
+    }
+    //图文列表
+    .start-pic {
+      width:1226px;
+      height:341px;
+      overflow: hidden;
+      position: relative;
+      .start-pic-ul {
+        position: absolute;
+        width:2452px;
+        li {
+          float: left;
+          width:234px;
+          height:340px;
+          margin-right:14px;
+          text-align:center;
+          background: #fafafa;
+          &.one {
+            border-top:1px solid #ffac13;
+          }
+          &.two {
+            border-top:1px solid #83c44e;
+          }
+          &.three {
+            border-top:1px solid #2196f3;
+          }
+          &.four {
+            border-top:1px solid #e53935;
+          }
+          &.last-li {
+            border-top:1px solid #00c0a5;
+            margin-right:0;
+          }
+          a.img-a {
+            display: block;
+            margin:38px 0 28px 0;
+            img {
+              height:160px;
+            }
+          }
+          a.name {
+            color: #000;
+          }
+          p {
+            color: #B0B0BA;
+            line-height:30px;
+            &.price {
+              color: @mi_color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//轮播图下方的热门推荐位和小米明星单品end
+//页面的主要产品家电 、 智能start
+.page-main {
+  padding:60px 0;
+  background: #f5f5f5;
+  .container {
+    //家电
+    .home-main {
+      width:100%;
+      overflow: hidden;
+      //头部
+      .box_hd {
+        height:58px;
+        padding-top:22px;
+        .title {
+          float: left;
+          font-size:22px;
+          font-weight:200;
+          padding-top:17px;
+        }
+        .tab_list {
+          padding-top:17px;
+          float: right;
+          li {
+            float: right;
+            font-size:16px;
+            padding-bottom:5px;
+            margin-left:26px;
+            cursor: pointer;
+            &.current {
+              color: @mi_color;
+              border-bottom:2px solid @mi_color;
+            }
+            &:hover {
+              color: @mi_color;
+              border-bottom:2px solid @mi_color;
+            }
+          }
+        }
+      }
+      .brick-promo-list {
+        height:614px;
+        //左部分
+        .brick-left {
+          width:234px;
+          height:614px;
+          .pic-left {
+            &>li {
+              transtion:box-shadow 0.5s, transform 0.5s;
+              &.max-left {
+                &>a {
+                  img {
+                    height:614px;
+                  }
+                }
+              }
+              &.one {
+                margin-bottom:14px;
+              }
+              &>a {
+                img {
+                  width:234px;
+                  height:300px;
+                }
+              }
+              &:hover {
+                box-shadow: 3px 8px 10px 5px #ebebeb;
+                transform:translateY(-3px);
+              }
+            }
+          }
+        }
+        //右边很多li的部分
+        .brick-right {
+          width:992px;
+          height:614px;
+          ul.brick-ul {
+            li {
+              float: left;
+              width:234px;
+              height:266px;
+              padding-top:34px;
+              text-align: center;
+              margin-left:14px;
+              background: #FFFFFF;
+              overflow: hidden;
+              position: relative;
+              transition: transform 0.6s;
+              .figure-img {
+                margin:0 auto 18px;
+                //margin-left:42px;
+                width:150px;
+                height:150px;
+
+                a {
+                  img {
+                    height:150px;
+                  }
+                }
+              }
+              &.first-row {
+                margin-bottom:14px;
+              }
+              h3.title {
+                a {
+                  color: #000;
+                }
+              }
+              p.desc {
+                color: #B0B0B0;
+                line-height:32px;
+              }
+              p.price {
+                color: @mi_color;
+                margin-top:10px;
+              }
+              //最后两个小小li
+              &.last-row-s {
+                height:143px;
+                margin-bottom:14px;
+                padding:0;
+                .figure-img-s {
+                  float: right;
+                  margin:31px 20px 0 0 ;
+                  a {
+                    img {
+                      height:80px;
+                    }
+                  }
+                }
+                .figure-tile {
+                  float: left;
+                  margin:46px 0 0 20px;
+                  h3.title-s {
+                    line-height:30px;
+                    a {
+                      color: #000;
+                    }
+                  }
+                  p.price-s {
+                    color: @mi_color;
+                  }
+                }
+                .figure-img-s-bottom {
+                  margin:40px 30px 0 0;
+                  a {
+                    font-size:50px;
+                  }
+                }
+                .figure-tile-bottom {
+                  text-align: left;
+                  margin:43px 0 0 38px;
+                  a.more:before {
+                    color: @mi_color;
+                    &:hover {
+                      color: @mi_color;
+                    }
+                  }
+                  h3.title-s {
+                    font-size:18px;
+                  }
+                  p.hot {
+                    color: #b4b4b4;
+                    line-height:30px;
+                  }
+                }
+              }
+
+              //定位框 新品, 赠品，打折信息，评论start
+              .locate {
+                position: absolute;
+                top:0;
+                left:50%;
+                margin-left:-35px;
+                display: block;
+                width:70px;
+                height:23px;
+                text-align: center;
+                line-height:23px;
+                color: #fff;
+                //新品
+                &.new {
+                  background: #83C44E;
+                }
+                //有赠品
+                &.gifts {
+                  background: #2196F3;
+                }
+                //打折
+                &.discount {
+                  background: #E53935;
+                }
+                //免邮费
+                &.free {
+                  background: #FFAC13;
+                }
+              }
+              .review-wrapper {
+                width:234px;
+                height:76px;
+                position: absolute;
+                bottom:-234px;
+                background: @mi_color;
+                transition: all 0.5s;
+                a.review-a {
+                  display: block;
+                  padding:5px 22px;
+                  span {
+                    display: block;
+                    text-align: left;
+                    line-height:23px;
+                  }
+                  .review {
+                    color: #FFFFFF;
+                  }
+                  .author{
+                    color: #d6d6d6;
+                  }
+                }
+              }
+              //鼠标悬停在li时，评论框滑出来
+              &:hover {
+                box-shadow: 3px 8px 10px 5px #ebebeb;
+                transform:translateY(-3px);
+              }
+              &:hover .review-wrapper {
+                bottom:0;
+              }
+              //定位框 新品, 赠品，打折信息，评论end
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//页面的主要产品家电 、 智能end
+//网站的脚下服务与友情链接start
+.site-footer {
+  .container {
+    //服务区
+    .footer-service {
+      height:80px;
+      .service-list {
+        height:80px;
+        border-bottom:1px solid #dadada;
+        li {
+          float: left;
+          width:244px;
+          height:80px;
+          text-align: center;
+          line-height:80px;
+          a {
+            font-size:20px;
+            color: #776177;
+            &:hover {
+              color: @mi_color;
+            }
+            &::before {
+              margin-right:6px;
+            }
+          }
+        }
+      }
+    }
+    //友情链接
+    .footer-links {
+      height:150px;
+      padding-top:42px;
+      .links-left {
+        dl {
+          width:160px;
+          float: left;
+          &.last-link {
+            width:175px;
+            border-right:1px solid #cccccc;
+          }
+          dt {
+            height:44px;
+            font-size:14px;
+            color: #000;
+          }
+          dd {
+            height:28px;
+            line-height:28px;
+            a:hover {
+              color: @mi_color;
+            }
+          }
+        }
+      }
+      //客户时间
+      .contact-right {
+        width:250px;
+        height:150px;
+        p {
+          line-height:30px;
+          text-align: center;
+        }
+        p.phone {
+          font-size:22px;
+          color: @mi_color;
+          //margin-top:26px;
+        }
+        a.time {
+          display: block;
+          width:120px;
+          height:28px;
+          color: @mi_color;
+          text-align: center;
+          line-height:28px;
+          margin:10px auto 0;
+          border:1px solid @mi_color;
+          &:hover {
+            color: #fff;
+            background: @mi_color;
+          }
+        }
+      }
+    }
+  }
+}
+//网站的脚下服务与友情链接end
+//网站脚注信息start
+.site-info {
+  background: #fafafa;
+  padding:30px 0;
+  .container {
+    overflow: hidden;
+    .logo-left {
+      width:800px;
+      height:57px;
+      p.logo {
+        float: left;
+        width:57px;
+        height:57px;
+        text-align: center;
+        line-height:57px;
+        margin-right:10px;
+        background: @mi_color;
+      }
+      &>ul {
+        float: left;
+        &>li {
+          float: left;
+          &>a {
+            color: #939393;
+            &:hover {
+              color: @mi_color;
+            }
+          }
+          &>span {
+            margin:0 3px;
+            color: #bfbfbf;
+          }
+        }
+      }
+      p.last-info {
+        color: #939393;
+        line-height:20px;
+        a:hover {
+          color: @mi_color;
+        }
+      }
+    }
+    .info-links {
+      &>a {
+        display: inline-block;
+        height:28px;
+        margin-left:5px;
+        &>img {
+          height:28px;
+        }
+      }
+    }
+  }
+  p.slogan {
+    font-size:26px;
+    color: #cccccc;
+    text-align: center;
+    margin-top:30px;
+    font-family:'楷体';
+  }
+}

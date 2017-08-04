@@ -1,0 +1,88 @@
+@import "base.css";
+html,
+body {
+  height: 100%;
+}
+body {
+  background: #f9f9f9;
+}
+.wrapper {
+  display: -webkit-box;
+  width: 100%;
+  padding-top: 120px;
+}
+.wrapper .register {
+  width: 854px;
+  height: 502px;
+  background: #FFFFFF;
+  margin: 0 auto;
+}
+.wrapper .register .logo_mi {
+  padding-bottom: 40px;
+}
+.wrapper .register .logo_mi a {
+  display: block;
+  width: 49px;
+  height: 49px;
+  margin: 0 auto;
+  background: url("../images/mi-logo.png") no-repeat center #ff6700;
+}
+.wrapper .register h1 {
+  font-size: 30px;
+  text-align: center;
+}
+.wrapper .register ul {
+  width: 330px;
+  margin: 36px auto 0;
+}
+.wrapper .register ul li {
+  width: 330px;
+  height: 40px;
+  margin-bottom: 14px;
+  position: relative;
+}
+.wrapper .register ul li input {
+  width: 320px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  padding-left: 10px;
+  border: 1px solid #E0E0E0;
+}
+.wrapper .register ul li span {
+  font-size: 16px;
+  color: #a4a4a4;
+  position: absolute;
+  left: 15px;
+  top: 10px;
+}
+.wrapper .register ul li button {
+  width: 330px;
+  height: 40px;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #FFFFFF;
+  cursor: pointer;
+  background: #ff6700;
+}
+.footer_info {
+  width: 100%;
+  height: 160px;
+  text-align: center;
+  padding-top: 70px;
+}
+.footer_info p {
+  color: #a4a4a4;
+  font-size: 14px;
+  line-height: 28px;
+}
+.footer_info p a {
+  color: #a4a4a4;
+}
+.footer_info p a:hover {
+  color: #ff6700;
+}
+.footer_info p span {
+  color: #a4a4a4;
+  padding: 0 8px;
+}

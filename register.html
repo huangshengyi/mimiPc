@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小米米账号-注册</title>
+    <link rel="Shortcut Icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="register">
+        <div class="logo_mi"><a href="index.html"></a></div>
+        <h1>注册小米米账号</h1>
+        <form action="./register.php" method="get">
+            <ul>
+                <li>
+                    <input type="text" name="usename" id="user">
+                    <span id="user_span">请输入账号</span>
+                </li>
+                <p id="user_p"></p>
+                <li>
+                    <input type="password" name="password" id="pass">
+                    <span id="pass_span">请输入密码</span>
+                </li>
+                <p id="pass_p"></p>
+                <li>
+                    <button>立即注册</button>
+                </li>
+            </ul>
+        </form>
+    </div>
+</div>
+<div class="footer_info">
+    <p>
+        <a href="javascript:;">简体</a> <span>|</span>
+        <a href="javascript:;">繁体</a> <span>|</span>
+        <a href="javascript:;">English</a> <span>|</span>
+        <a href="javascript:;">常见问题</a>
+    </p>
+    <p>本人纯属练习,要是有侵犯版权之处,请联系我删掉: QQ2458767808</p>
+</div>
+
+<script src="node_modules/scriptjs/dist/script.min.js"></script>
+<script>
+    //异步加载包
+    $script('./node_modules/jquery/dist/jquery.min.js', function(){
+        $script('js/register.js');
+    });
+</script>
+</body>
+</html>

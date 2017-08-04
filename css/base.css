@@ -1,0 +1,54 @@
+/*初始化样式*/
+body,div,ul,ol,li,h1,h2,h3,h4,h5,h6,p,img,dl,dt,dd {
+    margin:0;
+    padding:0;
+    font:12px "Microsoft Yahei";
+}
+ul,ol {
+    list-style: none;
+}
+select,input,img {
+    vertical-align: middle;
+}
+img {
+    border: 0 none;  /*兼容于ie6,7,因为ie6,7默认有图片的边框*/
+}
+a {
+    color: #B0B0B0;
+    text-decoration: none;
+}
+a:hover {
+    color: #fff;
+}
+input,button {
+    border:0;
+    outline:none;
+}
+/*左浮动*/
+.f_l {
+    float: left;
+}
+/*右浮动*/
+.f_r {
+    float: right;
+}
+/*伪元素清除浮动*/
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1; /*IE6\8*/
+}
+
+/*中间版心提取*/
+.container {
+    width:1226px;
+    margin:0 auto;
+}
+.hide {
+    display: none;
+}
